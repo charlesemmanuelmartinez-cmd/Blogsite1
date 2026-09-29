@@ -16,7 +16,7 @@ class Post(model.Model):
         created = models.DateTimeField(auto_now_add=True)
         status = models.CharField(max_leght=2,choices=Status.choices,default=Status.DRAFT)
 
-
+Hello
         class Meta:
             ordering = ['-publish']
             indexes = [
