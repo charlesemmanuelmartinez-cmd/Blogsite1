@@ -2,14 +2,14 @@ from django.db import models
 from django.utils import timezone
 from django.contrib.auth.models import User
 
-class Post(model.Model):
+class Post(models.Model):
 
     class Status(models.TextChoices):
         DRAFT ='Draft'
         PUBLISHED = 'PB', 'Published'
         title =models.CharField(max_leght=250)
         slug =models.SlugField(max_leght=250)
-        author =models.ForeignKey(User, on delete=models.CASCADE,
+        author =models.ForeignKey(User, on_delete=models.CASCADE,
                                     related_name='blog_posts')
 
         body = models.TextField()
