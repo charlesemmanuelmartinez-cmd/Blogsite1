@@ -19,10 +19,10 @@ class Post(models.Model):
                                     choices=Status.choices,
                                     default=Status.DRAFT)
     class Meta:
-    ordering = ['-publish']
-        indexes = [
-        models.Index(field=['-publish'])
-        ]
+        ordering = ['-publish']
+            indexes = [
+                models.Index(field=['-publish'])
+            ]
 
     def _str_(self):
         return self.title
