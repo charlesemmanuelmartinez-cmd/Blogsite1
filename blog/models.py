@@ -20,9 +20,9 @@ class Post(models.Model):
                                     default=Status.DRAFT)
     class Meta:
         ordering = ['-publish']
-            indexes = [
-                models.Index(field=['-publish'])
-            ]
+        indexes = [
+            models.Index(field=['-publish'])
+        ]
 
     def _str_(self):
         return self.title
